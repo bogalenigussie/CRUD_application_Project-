@@ -9,7 +9,7 @@ $("#update_user").submit(function(event){
    $.map(unindexed_array,function(n,i){
       data[n["name"]]=n["value"]
    })
-   console.log(data)
+   
    var request ={
        "url":`http://localhost:3000/api/users/${data.id}`,
        "method":"PUT",
@@ -17,27 +17,30 @@ $("#update_user").submit(function(event){
    }
    $.ajax(request).done(function(response){
       alert("Data successfully updated!");
+      
    })
 })
 
 if(window.location.pathname == "/"){
-    delete_btn =$(".table tbody td a.delete")
-    
-    delete_btn.click(function(){
-    var id = $(this).attr("data-id")    
-    var  request ={
-        "url":`http://localhost:3000/api/users/${id}`,
-        "method":"DELETE",
-      
-    }
-
-    if (confirm("Do you really want to delete this record?")){
-        $.ajax(request).done(function(response){
-            alert("Data successfully updated!");
-        })
-        alert("The record is succesfully deleted!");
-        location.reload()
-     }
-       
-    })
+   // $ondelete = $('.btn.border-shadow.delete');
+   
+    $(document).on('click','.btn.border-shadow.delete',(function(){
+       var id = $(this).attr("data-id")  
+       console.log(id)  
+       var request ={
+                          url:`http://localhost:3000/api/users/${id}`,
+                           method:"DELETE"
+                     }
+         if(confirm("do you really want to delete this record?"))
+           {
+            
+                $.ajax(request).done(function(response){
+                alert("User successfully deleted!");
+                location.reload();
+              })  
+          }
+   
+        } ))
+   
+  
 }

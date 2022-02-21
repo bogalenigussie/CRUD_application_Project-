@@ -29,30 +29,44 @@ exports.create =(req,res) => {
     })
 }
 
-//retrieve and return all users/retrive and return single user
+//retrieve and return all users
 exports.find = (req,res)=>{
-    if(req.query.id){
-        const id=req.query.id;
-        Userdb.findById(id)
-        .then(data => {
-            if(!data){
-                res.status(404).send({message:"not found user with id" + id})
-            }else{
-                res.send(data)
-            }
-        })
-        .catch(err =>{
-            res.status(500).send({message:"Error in retriving user with id" + id})
-        })
-    }else
+  console.log("inside find")
   Userdb.find()
-  .then(user =>{
-      res.send(user)
-  })
-  .catch(err =>{
-    res.status(500).send({message:err.message || "Error occurred while Creating a create Operation"});
+  .then (data => {
+    if(!data){
+    res.status(404).send({message:`Cannot find user with this ${id}`})
+    } else{
+    res.send(data)
+   }
+ })
+.catch(err =>{
+ res.status(500).send({message:"Error in finding user information"})
 })
 
+}
+
+//find user by Id
+exports.findById = (req,res)=>{
+    console.log("inside find by id ")
+    if(!req.body){
+      res.status(400).send({message:"Data to update can not be empty"});
+      return;
+  }
+  const id = req.params.id;
+  console.log(id)
+  Userdb.findById(id)
+  .then(data => {
+      if(!data){
+          res.status(404).send({message:`Cannot find user with this ${id}`})
+      } else{
+          res.send(data)
+      }
+  })
+     .catch(err =>{
+       res.status(500).send({message:"Error in finding user information. May be a user with the given Id does not exist!"})
+     })
+  
 }
 //Update a new identified user by user id
 exports.update = (req, res)=>{
@@ -77,4 +91,17 @@ exports.update = (req, res)=>{
 //Delete a user with specified user id in the request
 exports.delete =(req, res) =>{
 
+  const id=req.params.id;
+  Userdb.findByIdAndDelete(id)
+  .then(data =>{
+    if(!data){
+      res.status(404).send({message:`Cannot Update user with ${id}. May be user with this Id is not found`})
+  } else{
+      res.send(data)
+  }
+})
+ .catch(err =>{
+   res.status(500).send({message:"Error Update user information"})
+ })
+  
 }

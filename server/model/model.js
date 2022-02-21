@@ -7,6 +7,11 @@ var schema = new mongoose.Schema({
         type:String,
         required:true
     },
+    img:
+    {
+        data: Buffer,
+        contentType: String
+    },
     email:{
         type:String,
         required:true,

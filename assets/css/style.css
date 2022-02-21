@@ -55,7 +55,7 @@
     background-clip:text;
     -webkit-text-fill-color:transparent;
     font-weight: bolder;
-    font-size: 1.3em;
+    font-size: 1em;
 }
 
 #header nav {
@@ -100,7 +100,7 @@ table{
 }
 .thead-dark th{
     color:rgb(13, 97, 192);
-    font-size: 1.2em;
+    font-size: 1.1em;
     background-color: var(--dark);
     border-color:rgb(4, 97, 50);
    
