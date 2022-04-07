@@ -10,19 +10,20 @@
             <%=users[i].email%>
         </td>
         <td class="users-data">
-            <%= moment(users[i].date).format( 'HH:MM,DD-MM-YYYY')%>
+            <%=users[i].gender%>
         </td>
         <td class="users-data">
-            <%=users[i].gender%>
+            <%= moment(users[i].date).format( 'HH:MM|DD-MM-YYYY')%>
         </td>
         <td class="users-data">
             <%=users[i].status%>
         </td>
+
         <td>
             <a href="update-user?id=<%=users[i]._id%>" class="btn border-shadow update">
                 <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
             </a>
-            <a class="btn border-shadow delete" data-id=< %=users[i]._id%> > 
+            <a class="btn border-shadow delete" client-id=<%=users[i]._id%> > 
                 <span class="text-gradient"><i class="fas fa-times"></i></span>
             </a>
         </td>

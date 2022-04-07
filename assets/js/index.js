@@ -30,7 +30,7 @@ $(document).ready(function() {
     if (window.location.pathname == "/") {
 
         $(document).on('click', '.btn.border-shadow.delete', (function() {
-            var id = $(this).attr("data-id")
+            var id = $(this).attr("client-id")
             console.log("id is " + id)
             var request = {
                 url: `http://localhost:3000/api/users/${id}`,
