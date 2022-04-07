@@ -1,211 +1,269 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow&family=PT+Sans:ital@0;1&family=Poppins:wght@600&display=swap');
-
-:root{
-    --dark:#2b2d42;
-    --light:#adb5bd;
-    --border:#92a7bd;
-    --border-btn:#edf2f4;
+:root {
+    --dark: #272728;
+    --light: #adb5bd;
+    --border: #92a7bd;
+    --border-btn: #edf2f4;
 }
 
-*{
-     padding:0;
-     margin:0;
-     box-sizing:border-box;
- }
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
- a{
-     text-decoration: none;
-     font-family: 'PT Sans', sans-serif;
- }
- .container{
-     max-width:1024px;
-     margin:auto;
- }
- .nav-brand{
-     font-size:1.8em;
-     font-weight:bold;
- }
- .d-flex{
-     display:flex;
-     flex-wrap:wrap;
- }
-.justify-between{
+html {
+    background: url(../img/fit.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.container {
+    max-width: 1024px;
+    margin: auto;
+}
+
+.nav-brand {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.justify-between {
     justify-content: space-between;
 }
 
-.text-center{
-    text-align:center;
+.text-center {
+    text-align: center;
 }
-.border-shadow{
-    border:1px solid var(--border-btn);
-    box-shadow:1px 3px 10px #e9ecef;
+
+.border-shadow {
+    border: 1px solid var(--border-btn);
+    box-shadow: 1px 3px 10px #e9ecef;
 }
+
 .text-dark {
-    color:var(--dark);
+    color: var(--dark);
+    font-family: 'Franklin Gothic Medium';
+    font-size: 4rem;
 }
-.inline{
-    display:inline-block;
+
+.radio-label {
+    color: white;
+    font-size: 1rem;
 }
-.text-light{
-    color:var(--light);
+
+.users-data {
+    color: rgb(209, 228, 178);
+    font-size: lighter;
 }
-.text-gradient{
-    background: linear-gradient(to right,#301bec,#15aa07);
+
+.inline {
+    display: inline-block;
+}
+
+.text-light {
+    color: white;
+}
+
+.text-gradient {
+    background: linear-gradient(to right, #ec721b, #15aa07);
     -webkit-background-clip: text;
-    background-clip:text;
-    -webkit-text-fill-color:transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-weight: bolder;
     font-size: 1em;
 }
 
-#header nav {
-    background-color: rgb(16, 126, 230);
-    padding:1em 0;
-    width:100%;     
-}
-#site-main{
-    margin-top:5em;
-    font-family: "Barlow",sans-serif;
-    font-size: 1.2em;
-}
-#site-main.container.box-nav>a{
-    font-size:1.2em;
-    padding:0.2em 1em;
-}
-#site-main.container form{
-    margin:5em 0.3;
+.filter .fas.fa-angle-double-left {
+    color: #d6780d
 }
 
-table{
-    border-spacing:0px;
-    width:100%;
+#header nav {
+    background-color: #ec721b;
+    padding: 1em 0;
+    width: 100%;
+}
+
+#site-main {
+    margin-top: 5em;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 1.2em;
+}
+
+#site-main.container.box-nav>a {
+    font-size: 1.2em;
+    padding: 0.2em 1em;
+}
+
+#site-main.container form {
+    margin: 5em 0.3;
+}
+
+table {
+    border-spacing: 0px;
+    width: 100%;
     margin-top: 1.2em;
 }
-.table td,.table th{
-    padding:.75em;
+
+.table td,
+.table th {
+    padding: .50em;
     vertical-align: top;
     text-align: left;
     border-top: 1px solid var(--border);
 }
-.table td> a.btn{
-    padding:.3em 1em;
-    font-size:1.1em;
-    margin:0 .2em;
+
+.table td>a.btn {
+    padding: .2em 1em;
+    font-size: 1em;
+    margin: 0 .2em;
 }
-.table tr:hover{
-    background-color: rgb(29, 142, 235);
+
+.table tr:hover {
+    background-color: #ec721b;
 }
-.table tr:hover td>a{
-   box-shadow:none;
+
+.table tr:hover td>a {
+    box-shadow: none;
 }
-.thead-dark th{
-    color:rgb(13, 97, 192);
+
+.thead-dark th {
+    color: #ec721b;
     font-size: 1.1em;
     background-color: var(--dark);
-    border-color:rgb(4, 97, 50);
-   
+    border-color: rgb(153, 213, 183);
 }
-@media only screen and (max-width:1024px)
-{
-    table,thead,tbody,th,td,tr{
+
+@media only screen and (max-width:1024px) {
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
         display: block;
     }
-  
-    thead tr{
-        position:absolute;
-        top:-9999px;
-        left:-9999px;
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
     }
-    tr {border:0.1px solid var(--border)}
-    td{
-        border:none;
-        position:relative;
+    tr {
+        border: 0.1px solid var(--border)
     }
-    
-
+    td {
+        border: none;
+        position: relative;
+    }
 }
+
 
 /* styling add_user template */
-.form-title{
+
+.form-title {
     margin-top: 2em;
 }
-.form-title>h2{
-    padding:.5em 0;
+
+.form-title>h2 {
+    padding: .5em 0;
+    font-size: 2.5rem;
+    color: black
 }
-.new_user{
+
+.new_user {
     max-width: 786px;
-    margin:auto;
+    margin: auto;
 }
+
 #update_user .form-group,
-#add_user .form-group{
-    margin:.44em 0;
+#add_user .form-group {
+    margin: .44em 0;
 }
+
 #update_user .form-group input[type="text"],
-#add_user .form-group input[type="text"]{
-    width:100%;
-    padding:.6em 1em;
-    margin:.5em 0;
-    border:1px solid var(--border);
-    font-family: "Barlow",sans-serif;
+#add_user .form-group input[type="text"] {
+    width: 100%;
+    padding: .6em 1em;
+    margin: .5em 0;
+    border: 1px solid var(--border);
+    font-family: "Barlow", sans-serif;
     font-size: 1.2em;
     border-radius: .2em;
 }
 
 #update_user .form-group .radio,
-#add_user .form-group .radio{
-    margin:1em 2em;
+#add_user .form-group .radio {
+    margin: 1em 2em;
 }
+
 
 /* styling of the radio buttons */
-.radio input[type="radio"]{
-    position:absolute;
+
+.radio input[type="radio"] {
+    position: absolute;
     opacity: 0;
 }
-.radio input[type="radio"] + .radio-label:before{
-    content:"";
+
+.radio input[type="radio"]+.radio-label:before {
+    content: "";
     background: var(--border-btn);
     border-radius: 100%;
-    border:1px solid var(--border);
+    border: 1px solid var(--border);
     display: inline-block;
-    width:1em;
-    height:1em;
-    position:relative;
-    top:-0em;
-    margin-right:.5em;
-    cursor:pointer;
-    text-align:center;
+    width: 1em;
+    height: 1em;
+    position: relative;
+    top: -0em;
+    margin-right: .5em;
+    cursor: pointer;
+    text-align: center;
     -webkit-transition: all 250ms ease;
-    transition:all 250ms ease;
+    transition: all 250ms ease;
 }
 
-.radio input[type="radio"]:checked + .radio-label:before{
-    background-color:#0d3cd6 ;
-    box-shadow:inset 0 0 0 4px #e9ecef  ;
+.radio input[type="radio"]:checked+.radio-label:before {
+    background-color: #d6780d;
+    box-shadow: inset 0 0 0 4px #e9ecef;
 }
-.radio input[type="radio"]:focus + .radio-label:before{
-    outline:none;
-    border-color:#0a8d5d;
+
+.radio input[type="radio"]:focus+.radio-label:before {
+    outline: none;
+    border-color: #0a8d5d;
 }
-.radio input[type="radio"]:disabled + .radio-label:before{
-box-shadow:inset 0 0 0 4px #e9ecef  ;
-   border-color:#b4b4b4;
-   background:  #b4b4b4;
+
+.radio input[type="radio"]:disabled+.radio-label:before {
+    box-shadow: inset 0 0 0 4px #e9ecef;
+    border-color: #b4b4b4;
+    background: #b4b4b4;
 }
+
 #update_user .form-group .btn,
-#add_user .form-group .btn{
-   width:100%;
-   padding:.9em 1em;
-   background-color: rgb(16, 126, 230);
-   border: black;
-   font-family:  "PT Sans",sans-serif;
-   font-size:1.3em;
-   cursor:pointer;
-   border-radius: .2em;
-   margin:.5em 0;
+#add_user .form-group .btn {
+    width: 100%;
+    padding: .9em 1em;
+    background-color: #ec721b;
+    border: black;
+    font-family: "PT Sans", sans-serif;
+    font-size: 1.3em;
+    cursor: pointer;
+    border-radius: .2em;
+    margin: .5em 0;
 }
+
 #update_user .form-group .btn:hover,
-#add_user .form-group .btn:hover{
+#add_user .form-group .btn:hover {
     background-color: var(--dark);
-    color:var(--border-btn)
+    color: var(--border-btn)
 }
-    
