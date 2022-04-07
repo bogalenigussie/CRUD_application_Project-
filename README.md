@@ -12,9 +12,9 @@ Database : Mongo DB is used as a data store for user name, email,time,date,gende
 #Add new reservation page:
 where the user creates new reservation time tables!
 
-[fitnes2](https://user-images.githubusercontent.com/91279474/162281344-8a8bcde3-8cef-4cd1-bb1c-fbc578aecad0.png)
+![fitnes2](https://user-images.githubusercontent.com/91279474/162281864-2669313c-208d-43b9-a3cd-941425cdd29e.png)
 
 #Update reservation:
 here the  user can edit reservation information.!
 
-[fitnes3](https://user-images.githubusercontent.com/91279474/162281739-734cf29d-ed8e-4445-857e-ab65d2c01e42.png)
+![fitnes3](https://user-images.githubusercontent.com/91279474/162281895-578155a7-1938-4d74-9281-072902359098.png)
